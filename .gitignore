@@ -2,3 +2,5 @@ todolist-api/
 todolist-web/
 docs/
 .env
+.claude/
+.superpowers/
