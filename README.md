@@ -13,7 +13,7 @@ A full-stack todo application with AI chat assistant built with FastAPI and Vue 
 | Backend | FastAPI, SQLAlchemy (async), Alembic, Python 3.12 |
 | Frontend | Vue 3, TypeScript, Pinia, Tailwind CSS |
 | Database | PostgreSQL |
-| AI | Gemini 2.5 Flash with tool use + SSE streaming |
+| AI | Gemini 2.5 Flash (gemini-3.1-flash-lite) with tool use + SSE streaming |
 | Auth | JWT (access + refresh tokens) |
 
 ## Features
@@ -25,6 +25,8 @@ A full-stack todo application with AI chat assistant built with FastAPI and Vue 
 - Real-time streaming chat responses
 
 ## Running locally with Docker
+
+Works on **Windows, macOS, and Linux**.
 
 ### Prerequisites
 
@@ -38,6 +40,7 @@ A full-stack todo application with AI chat assistant built with FastAPI and Vue 
 **Windows (PowerShell):**
 ```powershell
 git clone https://github.com/jucewicz/todolist-app
+# or with SSH: git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 .\setup.ps1
 ```
@@ -45,24 +48,37 @@ cd todolist-app
 **Mac/Linux:**
 ```bash
 git clone https://github.com/jucewicz/todolist-app
+# or with SSH: git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 chmod +x setup.sh && ./setup.sh
 ```
 
-2. Create your `.env` file and fill in your Gemini API key:
+2. Create your `.env` file:
 
 ```bash
 cp .env.example .env
-# Open .env and set GEMINI_API_KEY=your-key-here
 ```
 
-3. Start all services:
+3. Fill in the required values in `.env`:
+
+- **`GEMINI_API_KEY`** — get yours at [aistudio.google.com](https://aistudio.google.com/)
+- **`SECRET_KEY`** — generate a secure random key:
+
+  ```bash
+  # Mac/Linux/Git Bash
+  openssl rand -hex 32
+
+  # PowerShell
+  [System.Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::GetBytes(32))
+  ```
+
+4. Start all services:
 
 ```bash
 docker-compose up --build
 ```
 
-4. Open [http://localhost](http://localhost) in your browser.
+5. Open [http://localhost](http://localhost) in your browser.
 
 The API docs are available at [http://localhost:8000/docs](http://localhost:8000/docs).
 
