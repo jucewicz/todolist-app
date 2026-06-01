@@ -35,31 +35,31 @@ Works on **Windows, macOS, and Linux**.
 
 ### Setup
 
-1. Clone this repo and run the setup script:
+1. Clone this repo and run the setup script — choose **one** of the options below:
 
-**Windows (PowerShell) — HTTPS:**
+**Windows (PowerShell):**
+
 ```powershell
+# HTTPS
 git clone https://github.com/jucewicz/todolist-app
 cd todolist-app
 .\setup.ps1
-```
 
-**Windows (PowerShell) — SSH:**
-```powershell
+# SSH
 git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 .\setup.ps1 -SSH
 ```
 
-**Mac/Linux — HTTPS:**
+**Mac/Linux:**
+
 ```bash
+# HTTPS
 git clone https://github.com/jucewicz/todolist-app
 cd todolist-app
 chmod +x setup.sh && ./setup.sh
-```
 
-**Mac/Linux — SSH:**
-```bash
+# SSH
 git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 chmod +x setup.sh && ./setup.sh --ssh
