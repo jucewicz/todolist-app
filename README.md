@@ -13,7 +13,7 @@ A full-stack todo application with AI chat assistant built with FastAPI and Vue 
 | Backend | FastAPI, SQLAlchemy (async), Alembic, Python 3.12 |
 | Frontend | Vue 3, TypeScript, Pinia, Tailwind CSS |
 | Database | PostgreSQL |
-| AI | Gemini 2.5 Flash (gemini-3.1-flash-lite) with tool use + SSE streaming |
+| AI | Gemini 3.1 Flash Lite with tool use + SSE streaming |
 | Auth | JWT (access + refresh tokens) |
 
 ## Features
