@@ -33,34 +33,36 @@ A full-stack todo application with AI chat assistant built with FastAPI and Vue 
 
 ### Setup
 
-1. Clone all three repos into the same folder:
+1. Clone this repo and run the setup script:
 
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/jucewicz/todolist-app
+cd todolist-app
+.\setup.ps1
+```
+
+**Mac/Linux:**
 ```bash
 git clone https://github.com/jucewicz/todolist-app
-git clone https://github.com/jucewicz/todolist-api
-git clone https://github.com/jucewicz/todolist-web
+cd todolist-app
+chmod +x setup.sh && ./setup.sh
 ```
 
-2. Navigate to `todolist-app` and create your `.env` file:
+2. Create your `.env` file and fill in your Gemini API key:
 
 ```bash
-cd todolist-app
 cp .env.example .env
+# Open .env and set GEMINI_API_KEY=your-key-here
 ```
 
-3. Open `.env` and fill in your Gemini API key:
-
-```
-GEMINI_API_KEY=your-key-here
-```
-
-4. Start all services:
+3. Start all services:
 
 ```bash
 docker-compose up --build
 ```
 
-5. Open [http://localhost](http://localhost) in your browser.
+4. Open [http://localhost](http://localhost) in your browser.
 
 The API docs are available at [http://localhost:8000/docs](http://localhost:8000/docs).
 
