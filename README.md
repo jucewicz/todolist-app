@@ -37,20 +37,32 @@ Works on **Windows, macOS, and Linux**.
 
 1. Clone this repo and run the setup script:
 
-**Windows (PowerShell):**
+**Windows (PowerShell) — HTTPS:**
 ```powershell
 git clone https://github.com/jucewicz/todolist-app
-# or with SSH: git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 .\setup.ps1
 ```
 
-**Mac/Linux:**
+**Windows (PowerShell) — SSH:**
+```powershell
+git clone git@github.com:jucewicz/todolist-app.git
+cd todolist-app
+.\setup.ps1 -SSH
+```
+
+**Mac/Linux — HTTPS:**
 ```bash
 git clone https://github.com/jucewicz/todolist-app
-# or with SSH: git clone git@github.com:jucewicz/todolist-app.git
 cd todolist-app
 chmod +x setup.sh && ./setup.sh
+```
+
+**Mac/Linux — SSH:**
+```bash
+git clone git@github.com:jucewicz/todolist-app.git
+cd todolist-app
+chmod +x setup.sh && ./setup.sh --ssh
 ```
 
 2. Create your `.env` file:
